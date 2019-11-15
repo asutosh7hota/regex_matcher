@@ -43,8 +43,8 @@ Output- Returns a JSON file with matched content of each URL and REGEX
 
 1. I used standard python libraries for this task and used asyncio and aiohttp for IO operations (fetching url's content)
 
-Why: In this task, there could be network latency in getting the content of the URLs and hence, I chose to go the async way.
-Other operations (matching regex) can be efficiently performed on the system.
+  Why: In this task, there could be network latency in getting the content of the URLs and hence, I chose to go the async       way.
+  Other operations (matching regex) can be efficiently performed on the system.
 
 2. I/O: I used command line arguments (argparse) so that the user could specify the input files and the periodicity.
 
