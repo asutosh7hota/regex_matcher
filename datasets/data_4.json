@@ -1,4 +1,7 @@
 {
-    "https://www.youtube.com/": ["^a...s$","(<div class=\"deg\">.*?</div>)"],
-    "https://238728632936.dkjfdf.com": ["^a...s$","(<div class=\"deg\">.*?</div>)"]
-        }
+  "https://www.youtube.com/": ["^a...s$", "(<div class=\"deg\">.*?</div>)"],
+  "https://238728632936.dkjfdf.com": [
+    "^a...s$",
+    "(<div class=\"deg\">.*?</div>)"
+  ]
+}
