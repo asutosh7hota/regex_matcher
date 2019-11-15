@@ -72,7 +72,7 @@ This should create a pip environment and install all dependencies in your system
 
 To run the code: 
 
-python url_regex_matcher.py -f <filenpath> -i <interval(in seconds)>
+python url_regex_matcher.py -f filenpath -i interval(in seconds)
 
 Example: 
 ```
