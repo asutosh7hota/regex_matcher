@@ -1,0 +1,7 @@
+{
+  
+  "http://python.org": ["<[^/>]+/>"],
+  "https://www.youtube.com/": ["^a...s$","(<div class=\"deg\">.*?</div>)"],
+  "https://www.google.com/": ["</[^/>]+>"]
+
+}

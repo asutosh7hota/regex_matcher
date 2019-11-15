@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>utils module &#8212; Regex Matcher 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-utils">
+<span id="utils-module"></span><h1>utils module<a class="headerlink" href="#module-utils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="utils.fetch">
+<em class="property">async </em><code class="sig-prename descclassname">utils.</code><code class="sig-name descname">fetch</code><span class="sig-paren">(</span><em class="sig-param">session</em>, <em class="sig-param">url</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.fetch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asynchronously fetches the content of a list of URLs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>session</strong> (<em>aiohttp.ClientSession</em><em>(</em><em>)</em>) – asyncio session event</p></li>
+<li><p><strong>url</strong> (<em>string</em>) – A URL</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.gather_urls">
+<em class="property">async </em><code class="sig-prename descclassname">utils.</code><code class="sig-name descname">gather_urls</code><span class="sig-paren">(</span><em class="sig-param">urls</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.gather_urls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a collection of URLs to be fetched assynchronously and fetches the content by
+calling the fetch method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>urls</strong> (<em>list</em><em> or </em><em>iterator of a dict.keys</em><em>(</em><em>)</em>) – Can take a list of urls or a collection of all the keys in a python dict.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.load_dataset">
+<code class="sig-prename descclassname">utils.</code><code class="sig-name descname">load_dataset</code><span class="sig-paren">(</span><em class="sig-param">filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.load_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the dataset (JSON) from directory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filepath</strong> (<em>string</em>) – Absolute path of the file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.parse_args">
+<code class="sig-prename descclassname">utils.</code><code class="sig-name descname">parse_args</code><span class="sig-paren">(</span><em class="sig-param">args</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.parse_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes in arguments for running the url_regex_matcher.py file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> (<em>list</em>) – A list of filepath and interval</p>
+</dd>
+</dl>
+<p>Filepath: Absolute path of the file
+Interval: Time at which the scheduler periodically runs the regex checks</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.regex_matcher">
+<code class="sig-prename descclassname">utils.</code><code class="sig-name descname">regex_matcher</code><span class="sig-paren">(</span><em class="sig-param">filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.regex_matcher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data from dictionary and return a output dictionary with regex matches
+for every url and corresponding REGEX</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filepath</strong> (<em>string</em>) – Absolute path of the input JSON file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.run">
+<code class="sig-prename descclassname">utils.</code><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">time</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Util function used to schedule the whole process periodically,
+Runs the different util functions to input, process and save 
+output JSON file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filepath</strong> (<em>string</em>) – Absolute path of the input JSON file</p></li>
+<li><p><strong>time</strong> (<em>string</em>) – Timestamp with date and time</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.save_output">
+<code class="sig-prename descclassname">utils.</code><code class="sig-name descname">save_output</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">time</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.save_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the output dictionary and saves the output with a timestamp</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Output dictionary with regex matches for every url and corresponding REGEX</p></li>
+<li><p><strong>time</strong> (<em>string</em>) – Timestamp with date and time</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Regex Matcher</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Asutosh Hota.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/utils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
