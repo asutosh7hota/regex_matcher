@@ -68,31 +68,14 @@ pipenv shell
 This should create a pip environment and install all dependencies in your system
 ## Files and folders
 
-.
-├── datasets
-│   ├── data_1.json
-│   ├── data_2.json
-│   ├── data_3.json
-│   ├── data_4.json
-│   └── data.json
-├── docs
-│   ├── _build
-│   │   ├── doctrees
-│   │   └── html
-│   ├── conf.py
-│   ├── index.rst
-│   ├── make.bat
-│   ├── Makefile
-│   ├── modules.rst
-│   ├── test_url_regex_matcher.rst
-│   ├── url_regex_matcher.rst
-│   └── utils.rst
-├── Pipfile
-├── Pipfile.lock
-├── README.md
-├── test_url_regex_matcher.py
-├── url_regex_matcher.py
-└── utils.py
+>>datasets
+>>docs
+>>Pipfile
+>>Pipfile.lock
+>>README.md
+>>test_url_regex_matcher.py
+>>url_regex_matcher.py
+>>utils.py
 
 datasets: Contains sample data
 docs: Sphinx files and build folder containing html files for documentation.
